@@ -48,3 +48,77 @@ if "4" in my_set:
     print("Yes 4 in my_set") 
 else:
     print("4 is not in my_set")
+
+"""
+
+Dictionaries:
+Create a dictionary named my_dict with the following key-value pairs: 'name': 'John', 'age': 25, 'city': 'New York'.
+Add a new key-value pair 'job': 'Engineer' to the dictionary.
+Update the value of the 'age' key to 26.
+Remove the 'city' key from the dictionary.
+Print all keys of the dictionary.
+Print all values of the dictionary.
+Print the entire dictionary.
+"""
+
+my_dict = {
+    "name" : "John",
+    "age"  : "25" ,
+    "city" : "New York",
+}
+my_dict["job"] = "Engineer"
+my_dict.update({"age" : "26"})
+my_dict.pop("city")
+x = my_dict.keys()
+print(x)
+y = my_dict.values()
+print(y)
+print(my_dict)
+
+"""
+Practice Question 	1:
+1. Check for palindrome 
+	True if “aca” or “aabbaa”
+	False if “abbbb” or “baabbb”
+"""
+def palindrome(string) :
+    if string in ('aca', 'aabbaa'):
+        return True
+    elif string in ('abbbb', 'baabbb'):
+        return False
+    else:
+        return None
+result = palindrome("abbbb")
+print(result)
+
+
+"""
+Area of Circle
+	Hint: Input radius and calculate area of circle formula: 3.14 * r * r
+"""
+radius = int(input("Enter your radius : "))
+Area_Circle = 3.14 * radius * radius
+print("Area of Circle is : ", Area_Circle)
+
+
+"""
+3. Check for prime number
+"""
+
+
+number = int (input ("Enter your number : "))
+for i in range (2, number):
+    if number % i == 0:
+        print(" Not Prime")
+        break 
+else:
+    print("Prime")
+
+
+"""
+. Fibonacci Sequence
+	Hint: Input max number (20) to print sequence 
+		Eg: 21
+			0 + 1 + 1+ 2 +3 +5 +8 +13 = 33
+"""
+
