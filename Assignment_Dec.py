@@ -24,79 +24,109 @@ Include random events (e.g., the pet finds a toy that boosts happiness).
 Create a save/load feature to resume the game later.
 
 """
+import time
+import random 
+import os
+import sys
 
-import random
-pet_name = None
-hunger = 50
-happiness = 50
-energy = 50
+PET_FILE = "PET.txt"
+
+
+
+
+class MyPet:
+     def __init__(self, name):
+    
+      self.pet_name = name
+      self.hunger = 50
+      self.happiness = 50
+      self.energy = 50
+
+
+     def feed_pet(self):
+        self.hunger = min(100, self.hunger + 20)
+        if self.hunger <= 0:
+            print("Game Over!!")
+            sys.exit(0)
+        print(f"\n{self.pet_name} hunger level increased to {self.hunger}")
         
-def feed_pet():
-        global hunger 
-        hunger = min(100, hunger + 20)
-        print(f"\n{pet_name} hunger level increased to {hunger}")
-
-def play_pet():
-            global happiness,energy 
-            happiness = min(100, happiness + 20)
-            energy = max (0, energy-10)
-            print(f"\n{pet_name} happiness increased to {happiness} and engery decreased to {energy}")
         
-def rest_pet():
-           global energy, hunger
-           energy = min(100, energy + 20)
-           hunger = max(0, hunger-5)
-           print(f"\n{pet_name} energy increased to {energy} and hunger decreased to {hunger}") 
+     def play_pet(self):
+            self.happiness = min(100, self.happiness + 20)
+            self.energy = max (0, self.energy-10)
+            if( self.happiness <=0 or self.energy<=0):
+                print("Game Over!!")
+                sys.exit(0)
+            print(f"\n{self.pet_name} happiness increased to {self.happiness} and engery decreased to {self.energy}")
+     
+     def rest_pet(self):
+           self.energy = min(100, self.energy + 20)
+           self.hunger = max(0, self.hunger-5)
+           if (self.hunger <=0 or self.energy <= 0):
+                print('Game Over!!!')
+                sys.exit(0)
+           print(f"\n{self.pet_name} energy increased to {self.energy} and hunger decreased to {self.hunger}") 
 
-def status_pet ():
-       print(f"\n Name : {pet_name}, hunger : {hunger}, happiness : {happiness}, energy : {energy}")
+     
+
+       
+def pet_game (pet):
+          while True:
+              print("\n== Update the pet ==")
+              print("1.Feed the pet")
+              print("2.Play with pet")
+              print("3.Rest Time")
+              print("4.save and Exit to main menu")
+              choice = input("Enter your choice(1/2/3/4): " ).strip()
+           
+              if choice == "1":
+                  pet.feed_pet()
+              elif choice == "2":
+                  pet.play_pet()
+              elif choice == "3":
+                  pet.rest_pet()
+              elif choice =="4":
+                  print(f"\nReturning to the main menu, {pet.pet_name}!")
+                  break
+              else:
+                  print("Invalid choice.Please try again. ")  
+             
+def main ():
+        pet=None
+        while True :
+             print("\nWhat would you like to do?")
+             print("1.Update the pet")
+             print("2.View the status")
+             print("3.Quit and save progress") 
+
+             choice = input("Enter your choice(1/2/3): " ).strip()
+             if choice == "1":
+               if not pet:
+                    pet_name=input("Enter your pet name:".strip())
+                    pet=MyPet(pet_name)
+                   
+               pet_game(pet)
+                        
+             elif choice == "2":
+               if pet:
+                    pet.status_pet()
+               else:
+                    print("\n You don't have a pet yet. Please create one first.")
+             elif choice =="3":
+               print("Goodbye!")
+               break
+             else:
+               print("Invalid choice.Please try again. ") 
 
 
-
-def pet_game ():
-       print("Welcome to Update the pet!")
-       petname = input("What is your pet name ? ")
-
-       while True:
-        print("\n== Update the pet ==")
-        print("1.Feed the pet")
-        print("2.Play with pet")
-        print("3.Rest Time")
-        print("4.Exit to main menu")
-        choice = input("Enter your choice(1/2/3/4): " ).strip()
-        if choice == "1":
-                feed_pet()
-        elif choice == "2":
-                play_pet()
-        elif choice == "3":
-                rest_pet()
-        elif choice =="4":
-                print(f"\nReturning to the main menu, {pet_name}!")
-                break
-        else:
-             print("Invalid choice.Please try again. ")  
-            
-def main():
-    while True :
-        print("\nWhat would you like to do?")
-        print("1.Update the pet")
-        print("2.View the status")
-        print("3.Quit and save progress") 
-
-        choice = input("Enter your choice(1/2/3): " ).strip()
-
-        if choice == "1":
-            pet_game()            
-        elif choice == "2":
-            status_pet()
-        elif choice =="3":
-                print("Goodbye!")
-                break
-        else:
-            print("Invalid choice.Please try again. ")  
-
+              
+        
 if __name__ == "__main__":
-    main()
+     main()
+
+
+
+
     
 
 
