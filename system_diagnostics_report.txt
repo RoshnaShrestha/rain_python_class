@@ -1,0 +1,21 @@
+System Diagnostics Report
+Generated on: 2025-01-21 16:46:24
+
+Current Working Directory:
+C:\Users\ACER\OneDrive\Desktop\os
+
+Disk Usage:
+Total Space: 476.07 GB
+Used Space: 77.17 GB
+Free Space: 398.91 GB
+
+System Information:
+Operating System: Windows 11 (Version: 10.0.26100)
+Machine: AMD64
+Processor: AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+
+Memory Information:
+Total Memory: 7.34 GB
+Available Memory: 1.28 GB
+Used Memory: 6.06 GB
+

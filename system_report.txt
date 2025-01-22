@@ -1,0 +1,73 @@
+Current Working Directory: C:\Users\ACER\OneDrive\Desktop\os
+Disk Usage:
+  Total: 476.07 GB
+  Used: 77.19 GB
+  Free: 398.88 GB
+System Information:
+
+Host Name:                     DESKTOP-R6NO78C
+OS Name:                       Microsoft Windows 11 Pro
+OS Version:                    10.0.26100 N/A Build 26100
+OS Manufacturer:               Microsoft Corporation
+OS Configuration:              Standalone Workstation
+OS Build Type:                 Multiprocessor Free
+Registered Owner:              ACER
+Registered Organization:       
+Product ID:                    00331-10000-00001-AA279
+Original Install Date:         12/20/2024, 3:29:52 PM
+System Boot Time:              1/16/2025, 9:45:59 AM
+System Manufacturer:           Acer
+System Model:                  Aspire A315-44P
+System Type:                   x64-based PC
+Processor(s):                  1 Processor(s) Installed.
+                               [01]: AMD64 Family 23 Model 104 Stepping 1 AuthenticAMD ~1801 Mhz
+BIOS Version:                  Insyde Corp. V1.01, 11/30/2023
+Windows Directory:             C:\WINDOWS
+System Directory:              C:\WINDOWS\system32
+Boot Device:                   \Device\HarddiskVolume1
+System Locale:                 en-us;English (United States)
+Input Locale:                  en-us;English (United States)
+Time Zone:                     (UTC+05:45) Kathmandu
+Total Physical Memory:         7,515 MB
+Available Physical Memory:     1,460 MB
+Virtual Memory: Max Size:      13,403 MB
+Virtual Memory: Available:     3,670 MB
+Virtual Memory: In Use:        9,733 MB
+Page File Location(s):         C:\pagefile.sys
+Domain:                        WORKGROUP
+Logon Server:                  \\DESKTOP-R6NO78C
+Hotfix(s):                     3 Hotfix(s) Installed.
+                               [01]: KB5049622
+                               [02]: KB5050009
+                               [03]: KB5050387
+Network Card(s):               2 NIC(s) Installed.
+                               [01]: MediaTek Wi-Fi 6 MT7921 Wireless LAN Card
+                                     Connection Name: Wi-Fi 2
+                                     DHCP Enabled:    Yes
+                                     DHCP Server:     192.168.1.254
+                                     IP address(es)
+                                     [01]: 192.168.1.179
+                                     [02]: fe80::5fd0:7bd2:6a7e:83d7
+                                     [03]: 2400:1a00:b040:536c:af1c:9826:625:1f95
+                                     [04]: 2400:1a00:b040:536c:c8:45d9:9b38:6409
+                               [02]: Realtek PCIe GbE Family Controller
+                                     Connection Name: Ethernet
+                                     Status:          Media disconnected
+Virtualization-based security: Status: Running
+                               Required Security Properties:
+                               Available Security Properties:
+                                     Base Virtualization Support
+                                     Secure Boot
+                                     DMA Protection
+                                     UEFI Code Readonly
+                                     SMM Security Mitigations 1.0
+                                     Mode Based Execution Control
+                               Services Configured:
+                                     Hypervisor enforced Code Integrity
+                               Services Running:
+                                     Hypervisor enforced Code Integrity
+                               App Control for Business policy: Enforced
+                               App Control for Business user mode policy: Off
+                               Security Features Enabled:
+Hyper-V Requirements:          A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+
